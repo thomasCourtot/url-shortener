@@ -1,0 +1,69 @@
+{
+  "info": {
+    "_postman_id": "88f44da4-1e87-452d-80c7-e147e7322a9e",
+    "name": "urlShortener",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Raccourcir URL",
+      "protocolProfileBehavior": {
+        "strictSSL": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"longUrl\": \"https://stackoverflow.com/questions/4267475/kjlskljdfhskjdlfhsdf\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/create-short",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "create-short"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Recuperer URL",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/?shortUrl=https://stackoverflow.com/f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            ""
+          ],
+          "query": [
+            {
+              "key": "shortUrl",
+              "value": "https://stackoverflow.com/f"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
